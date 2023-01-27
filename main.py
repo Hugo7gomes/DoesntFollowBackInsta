@@ -1,12 +1,12 @@
 import json
 
 f1 = open('following.json')
-f2 = open('following.json')
+f2 = open('followers.json')
 
 followingJson = json.load(f1)
 followsJson = json.load(f2)
 
-followingSet = {}
+followingSet = set()
 
 for following in followingJson["relationships_following"]:
         followingSet.add(following["string_list_data"][0]["value"])
